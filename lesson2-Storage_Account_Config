@@ -1,0 +1,66 @@
+# 📦 Azure Storage Account Configuration
+
+## ⏱️ Timestamp:  
+*e.g., 24:47 – 30:39*
+
+**Topic Covered:**  
+*Brief summary of what was done in the video*
+
+---
+
+## 🧱 Resource Details
+
+| Property                    | Value / Choice                         |
+|-----------------------------|----------------------------------------|
+| **Storage Account Name**    | `yourstoragename`                      |
+| **Resource Group**          | `your-resource-group`                  |
+| **Region**                  | e.g., East US                          |
+| **Performance Tier**        | Standard / Premium                     |
+| **Replication**             | LRS / GRS / ZRS                        |
+| **Access Tier**             | Hot / Cool                             |
+| **Hierarchical Namespace**  | Enabled / Disabled                     |
+
+---
+
+## 📁 Containers Created
+
+| Container Name   | Purpose                          |
+|------------------|----------------------------------|
+| `source`         | e.g., Raw data uploads            |
+| `destination`    | e.g., Transformed data output     |
+| `logs`           | e.g., Logging errors/process info |
+
+---
+
+## 🔐 Access Configuration
+
+- **Access via**: Storage Account Key / SAS / Managed Identity  
+- **Firewall/VNet Restrictions**: Enabled / Disabled  
+- **RBAC Roles Assigned**: (if any)
+
+---
+
+## 🖼️ Screenshots
+
+> 📸 Add screenshots of:
+- Storage account creation (with HNS enabled)
+- Containers list
+- Any config tabs you edited
+
+---
+
+## 🧪 Testing Done
+
+- ✅ Uploaded test files to containers  
+- ✅ Verified visibility from Data Factory
+
+---
+
+## 💬 Notes
+
+- Tips, errors encountered, or key learning points  
+- e.g., "Always enable HNS for Data Lake Gen2 compatibility"  
+
+---
+
+✅ **Last updated:** DD-MM-YYYY
