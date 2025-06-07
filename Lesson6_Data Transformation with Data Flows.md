@@ -108,18 +108,63 @@
 ![alt text](image-68.png)
 ---  
 
+### 📌 Step-by-Step Workflow
+
+#### 1. 🛠️ Data Flow Setup
+- Open the **Data Flow canvas** in ADF.
+- Create a new dataset → Set file path: `reporting/csvfiles`.
+- **Turn on debug cluster** to allow data preview.
+
+#### 2. 📥 Schema Import & Preview
+- Use **Import Projection** to load schema structure.
+- Enable **Data Preview** to validate incoming data.
+
+---
+
+### 🔄 Transformations Performed
+
+#### ✅ Column Selection
+- Selected only **6 relevant columns**.
+
+#### ✅ Filter
+- Applied **Filter**: Removed records where `cusid = 12`.
+
+#### ✅ Conditional Split
+- Split data into 3 streams based on **Payment Type**:
+  - `Visa`
+  - `Mastercard`
+  - `Amex`
+
+#### ✅ Derived Column
+- In the **Amex stream**, applied `Derived Column` to remove null values.
+
+#### ✅ Aggregation
+- Used **GroupBy** on `cusid`.
+- Aggregated **max of `prod_id`** per customer.
+
+#### ✅ Alter Row
+- Applied **Alter Row** transformation to mark all rows for **Insert**.
+  - Useful when targeting databases or performing conditional upserts.
+
+#### ✅ Sink (Write Output)
+- Wrote only the **Visa stream** to the final sink.
+- Skipped `Mastercard` and `Amex` outputs for privacy/security.
+
+### 🔔 Trigger Configuration
+
+- Added a trigger to the pipeline.
+- Activated it to automate execution (manual or scheduled).
+
+---
 
 
 #### 📈 Outcome
-- Only `Fact_*.csv` files are copied.
-- Applied transformations such as:
-  - Row number using window functions.
-  - Column cleanup / renaming.
-  - Filtering or data formatting.
-- Pipeline runs automatically as per the trigger.
+- Pipeline executed successfully via trigger.
+- Only `Fact_*.csv` Visa records were transformed and saved.
+- Output verified in sink and data preview.
 
 ---
 
 #### 📂 JSON File Reference:
-- [lesson5_dataflow_transform_fact.json](./lesson5_dataflow_transform_fact.json)
+- [lesson6_dataflow_transform_fact.json](./lesson6_dataflow_transform_fact.json)
 
