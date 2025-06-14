@@ -9,10 +9,11 @@
 ---
 
 #### 🧠 Objective:
-1)Apply transformations on the copied files using **Data Flows** and trigger the pipeline automatically using **Triggers**.
+1)Apply transformations on the copied files inside reporting folder using **Data Flows** and trigger the pipeline automatically using **Triggers**.
 ![alt text](image-58.png)
 2)Stream Processing & Conditional Splits: Creating multiple data streams using conditional splits (e.g., separating data by payment methods like MasterCard, American Express) within data transformation pipelines )
 ![alt text](image-63.png)
+3)Write the output of 1 particular data stream to the sink : */reporting/dataflowOutput*
 
 ---
 
