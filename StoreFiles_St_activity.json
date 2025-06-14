@@ -1,0 +1,13 @@
+{
+	"name": "var_files",
+	"value": [
+		{
+			"name": "Fact_Sales_1.csv",
+			"type": "File"
+		},
+		{
+			"name": "file2.csv",
+			"type": "File"
+		}
+	]
+}
